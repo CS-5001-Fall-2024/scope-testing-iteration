@@ -21,23 +21,105 @@ class: center, middle
 ---
 
 .left-column[
-  # Header
+  # Agenda
 ]
 .right-column[
 
-Contents
 
+- Scope
+
+- Returning multiple values
+
+- .remark-code[cigar_party] example and testing
+
+- .remark-code[while] loops
+  * login example
 ]
 ---
 
-# Header
+# Scope
 
-- Contents
+- *local* variables are initialized inside of a function and are accessible within that function
 
-<center><img height="350" src="https://static01.nyt.com/images/2022/01/31/crosswords/wordle-art/wordle-art-mediumSquareAt3X.jpg"/></center>
+- *global* variables are defined outside of a function and can be used anywhere
+  * global variables should be used sparingly
+
+- local variables shadow global variables
+  * will be used first
+
+- [More info](https://www.geeksforgeeks.org/difference-between-local-variable-and-global-variable/)
+
 
 ---
+
+# Multiple return values
+
+- python allows a function to return multiple values
+
+- .remark-code[return] followed by a comma-separated list
+  * .remark-code[return a, b]
+
+- returns a *tuple* (more on that later)
+
+- can be *unpacked* into multiple values
+  * .remark-code[result_1, result_2 = function()]
+
 ---
+
+# Testing
+
+```python
+
+"""
+When squirrels get together for a party, they like to have cigars. 
+A squirrel party is successful when the number of cigars is between 
+40 and 60, inclusive. Unless it is the weekend, in which case there 
+is no upper bound on the number of cigars. Return True if the party 
+with the given values is successful, or False otherwise.
+"""
+
+def cigar_party(cigars: int, is_weekend: bool) -> bool:
+  """Return True if the party is successful and False
+  otherwise.
+  """
+```
+
+- How many test cases are necessary?
+
+---
+
+# Iteration
+
+- Doing the same thing over and over
+  * Validating user input
+  * Reading data until you hit the end
+
+---
+
+# .remark-code[while] loops
+
+```python
+while condition:
+  do something
+
+```
+---
+
+# .remark-code[while] loops
+
+- The *control variable* controls when the loop stops
+
+- Step 1: initalize the control variable
+
+- Step 2: test the condition
+
+- Step 3: do your business
+
+- Step 4: update the control variable 
+
+---
+<!-- <center><img height="350" src="https://static01.nyt.com/images/2022/01/31/crosswords/wordle-art/wordle-art-mediumSquareAt3X.jpg"/></center> -->
+
 <!-- .left-column[
   ## 
 ]
